@@ -1,0 +1,49 @@
+$al-height:60px!default;
+
+
+.alert{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    border-radius: 10px;
+    color: $white;
+    padding: 20px 20px;
+    .al_left{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .closediv{
+       font-size: 16px;
+       width: auto;
+       height: 23px;
+       &:hover{
+           cursor: pointer;
+       }
+    }
+    .cl_size{
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
+        line-height: 25px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.al-success{
+    background-color: $success;
+}
+.al-default{
+    background-color: $primary;
+}
+.al-danger{
+    background-color: $danger;
+}
+.al-warning{
+    background-color: $warning;
+}
+
+
+
+

@@ -1,0 +1,52 @@
+$height: 40px;
+$paddingLeft:10px;
+.tab{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 30px;
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(100% - 1px);
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $menu-border-color;
+        z-index: -1;
+    }
+}
+
+.tabitem{
+    height: $height;
+    line-height:$height;
+    font-size: 20px;
+    padding: 0px $paddingLeft;
+    .tabcontent{
+        position: absolute;
+        left: $paddingLeft;
+        color: #000;
+        display: none;
+    }
+}
+.is-active{
+    color: $primary;
+    border-bottom: 2px solid $primary;
+    .tabcontent{
+        display: block;
+    }
+}
+
+.is-transparent.is-active{
+    border: 1px solid #ccc;
+    border-bottom-color: #fff;
+}
+
+.is-disabled{
+    color: #ccc;
+    &:hover,&:focus{
+        cursor: no-drop;
+    }
+}
+
